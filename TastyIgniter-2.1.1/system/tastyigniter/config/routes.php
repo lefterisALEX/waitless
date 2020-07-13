@@ -8,7 +8,7 @@ if (APPDIR === ADMINDIR) {
     $route['([^/]+)'] = 'setup/$1';
     $route['404_override'] = '';
 } else {
-    $default_controller = 'home';
+    $default_controller = 'menus';
     $controller_exceptions = array('home', 'menus', 'reservation', 'contact', 'local', 'cart', 'checkout', 'pages');
 
     $route['default_controller'] = $default_controller;
