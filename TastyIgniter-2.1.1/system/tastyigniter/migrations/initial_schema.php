@@ -532,7 +532,6 @@ $insert_layout_modules_data = "
     (67, 15, 'account_module', 'content_left', 1, 1),
     (68, 12, 'local_module', 'content_top', 1, 1),
     (69, 12, 'categories_module', 'content_left', 1, 1),
-    (70, 12, 'cart_module', 'content_right', 1, 1),
     (71, 13, 'local_module', 'content_top', 1, 1),
     (72, 13, 'cart_module', 'content_right', 1, 1),
     (73, 16, 'reservation_module', 'content_top', 1, 1),
