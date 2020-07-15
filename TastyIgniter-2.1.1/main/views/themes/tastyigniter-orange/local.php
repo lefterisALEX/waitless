@@ -30,7 +30,7 @@
             ?>
 
             <div class="<?php echo $class; ?>">
-
+<!-- WAITLESS: REMOVE NAV BAR from Menu. Includes MENU Tab/Reviews & Information
                 <div class="row wrap-vertical">
                     <ul id="nav-tabs" class="nav nav-tabs nav-tabs-line nav-menus">
                         <li class="active"><a href="#local-menus" data-toggle="tab"><?php echo lang('text_tab_menu'); ?></a></li>
@@ -42,7 +42,8 @@
                             <li><a href="#local-gallery" data-toggle="tab"><?php echo lang('text_tab_gallery'); ?></a></li>
                         <?php } ?>
                     </ul>
-                </div>
+                </div> 
+-->
 
                 <div class="tab-content tab-content-line content">
                     <div id="local-menus" class="tab-pane row wrap-all active">

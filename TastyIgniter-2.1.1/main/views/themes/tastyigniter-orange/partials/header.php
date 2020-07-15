@@ -91,7 +91,7 @@
 						<div class="collapse navbar-collapse" id="main-header-menu-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<?php if ($this->config->item('reservation_mode') === '1') { ?>
-	     	<!-- WAITLESS: REMOVE LOGIN AND REGISTER OPTIONS 
+	     	<!-- WAITLESS: REMOVE LOGIN AND RESERVATION OPTION
 									<li><a href="<?php echo site_url('reservation'); ?>"><?php echo lang('menu_reservation'); ?></a></li>
 			-->
 								<?php } ?>
