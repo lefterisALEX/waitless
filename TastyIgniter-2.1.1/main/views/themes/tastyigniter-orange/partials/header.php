@@ -91,7 +91,9 @@
 						<div class="collapse navbar-collapse" id="main-header-menu-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<?php if ($this->config->item('reservation_mode') === '1') { ?>
+	     	<!-- WAITLESS: REMOVE LOGIN AND REGISTER OPTIONS 
 									<li><a href="<?php echo site_url('reservation'); ?>"><?php echo lang('menu_reservation'); ?></a></li>
+			-->
 								<?php } ?>
 
 								<?php if ($this->customer->isLogged()) { ?>
@@ -109,8 +111,10 @@
 										</ul>
 									</li>
 								<?php } else { ?>
-									<li><a href="<?php echo site_url('account/login'); ?>"><?php echo lang('menu_login'); ?></a></li>
+			<!-- WAITLESS: REMOVE LOGIN AND REGISTER OPTIONS 
+			                        <li><a href="<?php echo site_url('account/login'); ?>"><?php echo lang('menu_login'); ?></a></li>
 									<li><a href="<?php echo site_url('account/register'); ?>"><?php echo lang('menu_register'); ?></a></li>
+			-->
 								<?php } ?>
 
 								<?php if (!empty($pages)) { ?>
