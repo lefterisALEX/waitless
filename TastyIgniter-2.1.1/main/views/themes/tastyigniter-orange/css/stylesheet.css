@@ -1371,7 +1371,7 @@ margin-top: 0;
   }
 
   .menu-item .menu-desc {
-	display: none;
+	line-height: 14px;
   }
 
   .menu-button .btn-cart-text, .menu-button .btn-review-text {
@@ -1393,7 +1393,7 @@ margin-top: 0;
   }
 
   .menu-item .menu-desc {
-	display: none;
+	line-height: 14px;
   }
 
   .menu-button .btn-cart-text, .menu-button .btn-review-text {
