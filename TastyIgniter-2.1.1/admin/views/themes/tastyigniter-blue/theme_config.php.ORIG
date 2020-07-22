@@ -14,6 +14,12 @@ $theme['version']       = '1.0';
 $theme['description']   = 'Responsive theme for admin panel';
 
 $theme['nav_menu'] = array(
+	'dashboard' => array(
+		'class' => 'dashboard admin',
+		'href' => site_url('dashboard'),
+		'icon' => 'fa-dashboard',
+		'title' => lang('menu_dashboard')
+	),
 	'kitchen' => array(
 		'class' => 'kitchen',
 		'icon' => 'fa-cutlery',
@@ -23,6 +29,28 @@ $theme['nav_menu'] = array(
 			'menus' => array('class' => 'menus', 'href' => site_url('menus'), 'title' => lang('menu_menu'), 'permission' => 'Admin.Menus'),
 			'menu_options' => array('class' => 'menu_options', 'href' => site_url('menu_options'), 'title' => lang('menu_option'), 'permission' => 'Admin.MenuOptions'),
 			'categories' => array('class' => 'categories', 'href' => site_url('categories'), 'title' => lang('menu_category'), 'permission' => 'Admin.Categories'),
+		)
+	),
+	'sales' => array(
+		'class' => 'sales',
+		'icon' => 'fa-bar-chart-o',
+		'title' => lang('menu_sale'),
+		'permission' => 'Admin.Orders|Admin.Reservations|Admin.Coupons',
+		'child' => array(
+			'orders' => array('class' => 'orders', 'href' => site_url('orders'), 'title' => lang('menu_order'), 'permission' => 'Admin.Orders'),
+			'reservations' => array('class' => 'reservations', 'href' => site_url('reservations'), 'title' => lang('menu_reservation'), 'permission' => 'Admin.Reservations'),
+			'coupons' => array('class' => 'coupons', 'href' => site_url('coupons'), 'title' => lang('menu_coupon'), 'permission' => 'Admin.Coupons'),
+		)
+	),
+	'marketing' => array(
+		'class' => 'marketing',
+		'icon' => 'fa-line-chart',
+		'title' => lang('menu_marketing'),
+		'permission' => 'Admin.Banners|Admin.Reviews|Admin.Messages',
+		'child' => array(
+			'reviews' => array('class' => 'reviews', 'href' => site_url('reviews'), 'title' => lang('menu_review'), 'permission' => 'Admin.Reviews'),
+			'messages' => array('class' => 'messages', 'href' => site_url('messages'), 'title' => lang('menu_messages'), 'permission' => 'Admin.Messages'),
+			'banners' => array('class' => 'banners', 'href' => site_url('banners'), 'title' => lang('menu_banner'), 'permission' => 'Admin.Banners'),
 		)
 	),
 	'restaurant' => array(
@@ -49,7 +77,13 @@ $theme['nav_menu'] = array(
 			'activities' => array('class' => 'activities', 'href' => site_url('activities'), 'title' => lang('menu_activities'), 'permission' => 'Admin.Activities'),
 		)
 	),
-
+	'extensions' => array(
+		'class' => 'extensions',
+		'href' => site_url('extensions'),
+		'icon' => 'fa-puzzle-piece',
+		'title' => lang('menu_extension'),
+		'permission' => 'Admin.Extensions'
+	),
 	'design' => array(
 		'class' => 'design',
 		'icon' => 'fa-paint-brush',
@@ -77,28 +111,28 @@ $theme['nav_menu'] = array(
 	        'statuses' => array('class' => 'statuses', 'href' => site_url('statuses'), 'title' => lang('menu_status'), 'permission' => 'Admin.Statuses'),
         )
 	),
-// 	'system' => array(
-// 		'class' => 'system',
-// 		'icon' => 'fa-cog',
-// 		'title' => lang('menu_system'),
-// 		'permission' => 'Admin.Permissions|Admin.ErrorLogs|Site.Settings',
-// 		'child' => array(
-// 			'settings' => array('class' => 'settings', 'href' => site_url('settings'), 'title' => lang('menu_setting'), 'permission' => 'Site.Settings'),
-// 			'permissions' => array('class' => 'permissions', 'href' => site_url('permissions'), 'title' => lang('menu_permission'), 'permission' => 'Admin.Permissions'),
-// //			'uri_routes' => array('class' => 'uri_routes', 'href' => site_url('uri_routes'), 'title' => lang('menu_uri_route')),
-// 			'error_logs' => array('class' => 'error_logs', 'href' => site_url('error_logs'), 'title' => lang('menu_error_log'), 'permission' => 'Admin.ErrorLogs'),
-// 			'tools' => array(
-// 				'class' => 'tools',
-// 				'title' => lang('menu_tool'),
-// 				'permission' => 'Admin.MediaManager|Admin.Maintenance',
-// 				'child' => array(
-// 					'image_manager' => array('class' => 'image_manager', 'href' => site_url('image_manager'), 'title' => lang('menu_media_manager'), 'permission' => 'Admin.MediaManager'),
-// 					'maintenance' => array('class' => 'maintenance', 'href' => site_url('maintenance'), 'title' => lang('menu_maintenance'), 'permission' => 'Admin.Maintenance'),
-// 				)
-// 			),
+	'system' => array(
+		'class' => 'system',
+		'icon' => 'fa-cog',
+		'title' => lang('menu_system'),
+		'permission' => 'Admin.Permissions|Admin.ErrorLogs|Site.Settings',
+		'child' => array(
+			'settings' => array('class' => 'settings', 'href' => site_url('settings'), 'title' => lang('menu_setting'), 'permission' => 'Site.Settings'),
+			'permissions' => array('class' => 'permissions', 'href' => site_url('permissions'), 'title' => lang('menu_permission'), 'permission' => 'Admin.Permissions'),
+//			'uri_routes' => array('class' => 'uri_routes', 'href' => site_url('uri_routes'), 'title' => lang('menu_uri_route')),
+			'error_logs' => array('class' => 'error_logs', 'href' => site_url('error_logs'), 'title' => lang('menu_error_log'), 'permission' => 'Admin.ErrorLogs'),
+			'tools' => array(
+				'class' => 'tools',
+				'title' => lang('menu_tool'),
+				'permission' => 'Admin.MediaManager|Admin.Maintenance',
+				'child' => array(
+					'image_manager' => array('class' => 'image_manager', 'href' => site_url('image_manager'), 'title' => lang('menu_media_manager'), 'permission' => 'Admin.MediaManager'),
+					'maintenance' => array('class' => 'maintenance', 'href' => site_url('maintenance'), 'title' => lang('menu_maintenance'), 'permission' => 'Admin.Maintenance'),
+				)
+			),
 
-// 		)
-// 	),
+		)
+	),
 	'collapse' => array(
 		'class' => 'hidden-xs sidebar-toggle',
 		'icon' => 'fa-chevron-circle-left',
