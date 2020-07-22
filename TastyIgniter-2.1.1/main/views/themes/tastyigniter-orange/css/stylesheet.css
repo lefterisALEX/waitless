@@ -659,9 +659,6 @@ font-size: 12px;
 }
 
 .img-thumbnail {
-border: 0 solid #ddd;
-border-radius: 0;
-padding: 0;
 display: none;
 }
 
