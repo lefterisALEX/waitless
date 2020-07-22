@@ -662,6 +662,7 @@ font-size: 12px;
 border: 0 solid #ddd;
 border-radius: 0;
 padding: 0;
+display: none;
 }
 
 .text-muted {
