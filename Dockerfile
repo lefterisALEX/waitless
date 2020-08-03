@@ -34,7 +34,7 @@ RUN a2enmod rewrite
 VOLUME /var/www/html
 
 ENV TASTYIGNITER_VERSION 2.1.1
-ENV WAITLESS_VERSION 0.32
+ENV WAITLESS_VERSION 0.31
 
 RUN set -ex; \
        	curl -o tastyigniter.zip -fSL "https://github.com/lefterisALEX/waitless/archive/${WAITLESS_VERSION}.zip"; \
